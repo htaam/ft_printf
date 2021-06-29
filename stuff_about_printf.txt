@@ -1,0 +1,53 @@
+conversions i must do: cspdiuxX%
+
+c - char
+s - string
+p - pointer in hexalower
+d & i - signed int
+u - unsigned int
+x - unsigned lowercase hexadecimal
+X - unsigned uppercase hexadecimal
+% - just a %
+
+flags i must do: -0.* 
+I also must do minumum field
+
+Printf conversion structure
+
+%[flags][width][.precision][length]specifier
+
+flags
+
+    - - left align the output
+    0 - fills pading with 0s instead of ' '. Does not work with s conversion. ignored if there is a - flag.
+
+
+width
+
+    number - (must not begin with 0) the minumum number of chars to be printed. if the string is shorter pad to the right with ' '
+    * - the number is in an argument before the actual argument instead of in the string
+    Both cases always print evrything if the value to be printed is bigger
+
+.persision
+
+    .number     - for d,i,u,x,X minimum number of digits to be printed. pad with 0s to the left.
+                if the value is 0 and persision is 0 print nothing
+                - for s the maximum number of chars to be printed
+                if no value is given after the . assume 0
+    .*       see width *
+
+
+length
+    does not apply to mandatory
+
+
+specifier
+
+    c - char
+    s - string
+    p - pointer in hexalower
+    d & i - signed int
+    u - unsigned int
+    x - unsigned lowercase hexadecimal
+    X - unsigned uppercase hexadecimal
+    % - just a %
